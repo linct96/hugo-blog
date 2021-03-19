@@ -4,26 +4,38 @@ paginate = 5.0
 title = "Site"
 theme = "PaperMod"
 
-# 支持搜索
-[outputs]
-  home = [
-    "HTML",
-    "RSS",
-    "JSON"
-  ]
-
+# 设置文档 https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-variables/#site-variables-under-params
 [params]
-  description = "my site"
+  title = "title"
+  description = "my description"
   author = "linct"
   defaultTheme = "auto"
   ShowReadingTime = true # 展示阅读时间
   ShowShareButtons = true # 展示分享按钮
+  comments = true
+  enableGitalk = true
+
+
+  [params.Gitalk]
+    clientID = "6f6872fbca244c9bf7da" # Your client ID
+    clientSecret = "711ca7ce058b2d117e0c7679bc48f6ea52d0442a" # Your client secret
+    repo = "linct.xyz" # The repo to store comments
+    owner = "linct96" # Your GitHub ID
+    admin= "linct96" # Required. Github repository owner and collaborators. (Users who having write access to this repository)
+    id= "location.pathname" # The unique id of the page.
+    labels= "gitalk" # Github issue labels. If you used to use Gitment, you can change it
+    perPage= 10 # Pagination size, with maximum 100.
+    pagerDirection= "last" # Comment sorting direction, available values are 'last' and 'first'.
+    createIssueManually= false # If it is 'false', it is auto to make a Github issue when the administrators login.
+    distractionFreeMode= false # Enable hot key (cmd|ctrl + enter) submit comment.
 
   # 首页信息 
   [params.homeInfoParams]
     Title = "Hi there 👋"
     Content = """
       Welcome to my blog dsa
+    Welcome to my blog dsa
+    Welcome to my blog dsa
     Welcome to my blog dsa
     """
   
@@ -78,3 +90,11 @@ theme = "PaperMod"
     name = "Search"
     url = "/search/"
     weight = 10.0
+
+# 支持搜索
+[outputs]
+  home = [
+    "HTML",
+    "RSS",
+    "JSON"
+  ]
