@@ -1,0 +1,80 @@
+baseURL = "https://linct.xyz/"
+languageCode = "en-us"
+paginate = 5.0
+title = "Site"
+theme = "PaperMod"
+
+# 支持搜索
+[outputs]
+  home = [
+    "HTML",
+    "RSS",
+    "JSON"
+  ]
+
+[params]
+  description = "my site"
+  author = "linct"
+  defaultTheme = "auto"
+  ShowReadingTime = true # 展示阅读时间
+  ShowShareButtons = true # 展示分享按钮
+
+  # 首页信息 
+  [params.homeInfoParams]
+    Title = "Hi there 👋"
+    Content = """
+      Welcome to my blog dsa
+    Welcome to my blog dsa
+    """
+  
+  # 联系按钮
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/"
+
+  [[params.socialIcons]]
+    name = "stackoverflow"
+    url = "https://stackoverflow.com"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/"
+
+  [[params.socialIcons]]
+    name = "buymeacoffee"
+    url = "https://github.com/"
+
+    
+  # 搜索设置
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0.0
+    distance = 1000.0
+    threshold = 0.4
+    minMatchCharLength = 0.0
+    keys = [
+      "title",
+      "permalink",
+      "summary",
+      "content"
+    ]
+    
+[menu]
+  [[menu.main]]
+    identifier = "archives"
+    name = "Archives"
+    url = "/archives/"
+    weight = 10.0
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 10.0
+
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 10.0
