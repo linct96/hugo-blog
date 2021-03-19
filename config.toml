@@ -19,7 +19,7 @@ theme = "PaperMod"
   [params.Gitalk]
     clientID = "b7233ea49aef7982eb5b" # Your client ID
     clientSecret = "89cb07e16efecf74de7e423ad0306f0129a4356d" # Your client secret
-    repo = "https://github.com/linct96/git-talk.git" # The repo to store comments
+    repo = "git-talk" # The repo to store comments
     owner = "linct96" # Your GitHub ID
     admin= "linct96" # Required. Github repository owner and collaborators. (Users who having write access to this repository)
     id= "location.pathname" # The unique id of the page.
