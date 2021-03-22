@@ -1,7 +1,7 @@
 baseURL = "https://linct.xyz/"
 languageCode = "en-us"
 paginate = 5.0
-title = "Site"
+title = "linct's blog"
 theme = "PaperMod"
 Copyright = "Copyright ©  2021 [linct](https://linct.xyz/). All Rights Reserved. Powered By [Hugo](https://gohugo.io/)."
 
@@ -9,7 +9,7 @@ Copyright = "Copyright ©  2021 [linct](https://linct.xyz/). All Rights Reserved
 # 设置文档 https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-variables/#site-variables-under-params
 [params]
   title = "title"
-  description = "my description"
+  # description = "my description"
   author = "linct"
   defaultTheme = "auto"
   ShowReadingTime = true # 展示阅读时间
@@ -34,10 +34,7 @@ Copyright = "Copyright ©  2021 [linct](https://linct.xyz/). All Rights Reserved
   [params.homeInfoParams]
     Title = "Hi there 👋"
     Content = """
-      Welcome to my blog dsa
-    Welcome to my blog dsa
-    Welcome to my blog dsa
-    Welcome to my blog dsa
+      Welcome to my blog
     """
   
   # 联系按钮
