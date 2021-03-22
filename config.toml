@@ -3,6 +3,8 @@ languageCode = "en-us"
 paginate = 5.0
 title = "Site"
 theme = "PaperMod"
+Copyright = "Copyright ©  2021 [linct](https://linct.xyz/). All Rights Reserved. Powered By [Hugo](https://gohugo.io/)."
+
 
 # 设置文档 https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-variables/#site-variables-under-params
 [params]
