@@ -70,10 +70,10 @@ pip3 install powerline-status  //python3使用pip3
 
 [Meslo LG M Regular for Powerline](https://github.com/powerline/fonts/blob/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf)
 
-
 ## 配置主题
 
 agnoster已内置，无需下载
+
 ```bash
 vi ~/.zshrc
 # 将ZSH_THEME后面的字段改为agnoster
@@ -91,4 +91,3 @@ plugins=(
   zsh-syntax-highlighting
 )
 ```
-
