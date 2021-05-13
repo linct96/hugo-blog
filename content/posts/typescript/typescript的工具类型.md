@@ -164,7 +164,7 @@ const a: Something = {
 
 ## Pick<Type,Keys>
 
-> 构造一个 Type 的属性为 Keys，类型为 Type 的对象类型。通常将一个类型的属性映射到另一个类型上
+> 通过对 Type 的属性进行挑选组成新的类型
 
 这里是[源码](https://github.com/microsoft/TypeScript/blob/8da3eff7b0dbb68c17a950c006edf143456b28cc/src/lib/es5.d.ts#L1442)对其的定义：
 
@@ -173,38 +173,57 @@ const a: Something = {
  * From T, pick a set of properties whose keys are in the union K
  */
 type Pick<T, K extends keyof T> = {
-    [P in K]: T[P];
+  [P in K]: T[P];
 };
 ```
 
 举个应用 🌰
 
 ```ts
-type Fruits = {
-  apple: string;
-  banana: string;
+type Person = {
+  name: string;
+  age: number;
 };
 
-type Attributes = {
-  from: string;
-  color: string;
-};
-
-type Something = Record<Fruits, Attributes>;
+type Something = Pick<Person, "age">;
 // 等价于
 type Something = {
-  apple: Attributes;
-  banana: Attributes;
+  age: number;
 };
 
 const a: Something = {
-  apple: {
-    from: "south",
-    color: "red",
-  },
-  age: {
-    from: "north",
-    color: "yellow",
-  },
+  age: 11,
+};
+```
+
+## Omit<Type, Keys>
+
+> 通过对 Type 的属性进行舍弃组成新的类型，与 Pick 相反
+
+这里是[源码](https://github.com/microsoft/TypeScript/blob/8da3eff7b0dbb68c17a950c006edf143456b28cc/src/lib/es5.d.ts#L1466)对其的定义：
+
+```ts
+/**
+ * Construct a type with the properties of T except for those in type K.
+ */
+type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;
+```
+
+举个应用 🌰
+
+```ts
+type Person = {
+  name: string;
+  age: number;
+};
+
+type Something = Pick<Person, "age">;
+// 等价于
+type Something = {
+  age: number;
+};
+
+const a: Something = {
+  age: 11,
 };
 ```
